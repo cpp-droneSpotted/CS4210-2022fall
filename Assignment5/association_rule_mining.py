@@ -75,7 +75,6 @@ for index, row in rules.iterrows():
 #prior = suportCount/len(encoded_vals) -> encoded_vals is the number of transactions
 #print("Gain in Confidence: " + str(100*(rule_confidence-prior)/prior))
 #-->add your python code below
-
     prior = min(rules['antecedent support'][index], rules['consequent support'][index])
     rule_confidence = row.confidence
     print("Prior: ", prior)
