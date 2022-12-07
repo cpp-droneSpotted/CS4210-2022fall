@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
+# AUTHOR: Yi Huang
+# FILENAME: association_rule_mining.py
 # SPECIFICATION: description of the program
 # FOR: CS 4210- Assignment #5
 # TIME SPENT: how long it took you to complete the assignment
@@ -76,7 +76,7 @@ for index, row in rules.iterrows():
 #print("Gain in Confidence: " + str(100*(rule_confidence-prior)/prior))
 #-->add your python code below
 
-    prior = min(rules['antecedent support'][i], rules['consequent support'][i])
+    prior = min(rules['antecedent support'][index], rules['consequent support'][index])
     rule_confidence = row.confidence
     print("Prior: ", prior)
     print("Gain in Confidence: " + str(100*(rule_confidence-prior)/prior) + '\n')
