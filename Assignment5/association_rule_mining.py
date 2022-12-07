@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------
-# AUTHOR: Yi Huang
-# FILENAME: association_rule_mining.py
+# AUTHOR: your name
+# FILENAME: title of the source file
 # SPECIFICATION: description of the program
 # FOR: CS 4210- Assignment #5
 # TIME SPENT: how long it took you to complete the assignment
@@ -62,11 +62,11 @@ rules = association_rules(freq_items, metric="confidence", min_threshold=0.6)
 #Prior: 0.4380952380952381
 #Gain in Confidence: 52.17391304347825
 #-->add your python code below
-for i, row in rules.iterrows():
-    print(list(row.antecedents), "->", list(row.consequents))
-    support = row.support
+for index, row in rules.iterrows():
+    print(list(row['antecedents']), "->", list(row['consequents']))
+    support = row['support']
     print("Support: ", support)
-    confidence = row.confidence
+    confidence = row['confidence']
     print("Confidence: ", confidence)
 
 
